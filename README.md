@@ -92,3 +92,7 @@ Table: generated_websites
 ## 🔐 Environment Setup
 
 1. Clone the repository
+
+
+![Project Screenshot](public/img/screenshot1.png)
+![Project Screenshot](public/img/screenshot2.png)
