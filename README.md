@@ -5,7 +5,8 @@ An AI-powered dynamic website generator built using Laravel, MySQL, HTML, CSS, J
 This system allows users to generate complete responsive websites automatically based on business idea, category, and design style using Generative AI.
 
 ---
-
+![Project Screenshot](public/img/screenshot1.png)
+![Project Screenshot](public/img/screenshot2.png)
 ## 🌟 Project Overview
 
 The AI Website Generator is a smart SaaS-style web application where:
@@ -94,5 +95,3 @@ Table: generated_websites
 1. Clone the repository
 
 
-![Project Screenshot](public/img/screenshot1.png)
-![Project Screenshot](public/img/screenshot2.png)
