@@ -37,7 +37,7 @@ This project demonstrates full-stack development with AI integration.
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ System Architectures
 
 Frontend (HTML, CSS, JS)
         ↓
