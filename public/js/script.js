@@ -26,24 +26,35 @@ function generateWebsite() {
             design: design
         })
     })
-    .then(res => res.json())
+    .then(res => {
+        if (!res.ok) {
+            throw new Error("Server Error: " + res.status);
+        }
+        return res.json();
+    })
     .then(data => {
 
-        // 🔥 If backend sends error
-        if (!data.status) {
+        console.log("Server Response:", data);
+
+        if (!data.status || !data.html) {
             document.getElementById('result').innerHTML =
-                "<p style='color:red; text-align:center;'>Something went wrong!</p>";
+                "<p style='color:red; text-align:center;'>AI response invalid.</p>";
             return;
         }
 
-        // 🔥 Professional Preview Render
         document.getElementById('result').innerHTML =
             "<iframe id='previewFrame' style='width:100%; height:650px; border:none; border-radius:20px; box-shadow:0 20px 60px rgba(0,0,0,0.4); background:white;'></iframe>";
 
         let iframe = document.getElementById('previewFrame');
-        iframe.contentDocument.open();
-        iframe.contentDocument.write(data.html);
-        iframe.contentDocument.close();
+
+        if (iframe && iframe.contentDocument) {
+            iframe.contentDocument.open();
+            iframe.contentDocument.write(data.html);
+            iframe.contentDocument.close();
+        } else {
+            document.getElementById('result').innerHTML =
+                "<p style='color:red; text-align:center;'>Preview loading failed.</p>";
+        }
     })
     .catch(error => {
         console.error("Error:", error);

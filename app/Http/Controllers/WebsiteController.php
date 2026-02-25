@@ -131,7 +131,7 @@ class WebsiteController extends Controller
         Design Style: {$design}
 
         Create a Header section using HTML, CSS and JS.
-        Include logo and navigation menu.
+        Include logo and navigation menu.   
         ";
 
             // 🔥 Prompt 2 - Hero
